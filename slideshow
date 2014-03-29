@@ -1,4 +1,4 @@
-echo "Welcome to the slideshow.. Here are some pictures and music. that you can add to yourself.... Did you know that everything you see on a computer. Even my own voice. are just a sequnece of numbers.. Ones and Zeros..... These number are called Binary.... Math is a very important thing to learn well If you want to make things on a computer."|festival --tts &>/dev/null &
+echo "Welcome to the slide show.. Here are some pictures and music. that you can add to yourself.... Did you know that everything you see on a computer. Even my own voice. are just a sequence of numbers.. Ones and Zeros..... These number are called Binary.... Math is very important If you want to make things on a computer.... .... ..... Theres no limit to what you can make on a computer If you work hard at it.. .. All of your favorite video games are made by people who studied computers. They worked hard in school to be able to do that"|festival --tts &>/dev/null &
 
 ./song.beep &>/dev/null &
 ls -1 *.img|while read line;
@@ -8,3 +8,4 @@ do
 done
 pkill -9 beep
 beep -f 1174.7 -l 122 -d 0
+pkill -9 play
