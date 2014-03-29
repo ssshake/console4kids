@@ -4,7 +4,7 @@ voice(){
         echo $1|festival --tts&> /dev/null
 }
 
-voice "Hello I'm here to help. What is your name?"
+voice "Hello I'm here to help. Tell me your name."
 
 echo -n "My name is "
 read name
