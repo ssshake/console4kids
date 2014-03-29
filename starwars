@@ -1,2 +1,2 @@
-./view-image starwars.img
-./starwars.beep &> /dev/null 
+./starwars.beep &> /dev/null & 
+./animate-image starwars2.img
