@@ -1,4 +1,5 @@
-echo "Welcome to the slideshow.. Here are some pictures and music. that you can add to yourself"|festival --tts &>/dev/null &
+echo "Welcome to the slideshow.. Here are some pictures and music. that you can add to yourself.... Did you know that everything you see on a computer. Even my own voice. are just a sequnece of numbers.. Ones and Zeros..... These number are called Binary.... Math is a very important thing to learn well If you want to make things on a computer."|festival --tts &>/dev/null &
+
 ./song.beep &>/dev/null &
 ls -1 *.img|while read line;
 do
