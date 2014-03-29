@@ -20,6 +20,7 @@ echo "
 
 	   Press Keys to Play
 "
+echo "Welcome to the Piano. Press any keys to play a song"|festival --tts &> /dev/null&
 
 while true
 do
@@ -84,7 +85,6 @@ do
 		$'\e') 
 			echo "Good Bye"|festival --tts &> /dev/null&
 			exit ;;	
-	
 		*)
 			note=C3;
 	esac
