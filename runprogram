@@ -7,13 +7,13 @@
 
 	./talk-to-computer $1 2> /dev/null
 
-	./view-image mario4.img
+	./animate-image mario4.img
 
 	sleep 2
 
 	./mario.beep
 
-	./view-image starwars.img
+	./animate-image starwars.img
 
 	sleep 2
 
@@ -31,7 +31,7 @@
 
 	./playtetris
 
-	sleep 2
 
+	./animate-image tweetie.img
 	echo "Goodbye"| festival --tts &> /dev/null
 #fi

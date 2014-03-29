@@ -1,0 +1,7 @@
+length=`wc -l $1|cut -d' ' -f1`
+for i in `seq 1 $length`;
+do
+	clear;
+	./view-image $1|head -n $i;
+	sleep .1
+done
