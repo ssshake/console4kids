@@ -11,13 +11,13 @@
 
 	sleep 2
 
-	./mario_beep
+	./mario.beep
 
 	./view_image star_wars.img
 
 	sleep 2
 
-	./star_wars_beep
+	./star_wars.beep
 
 	sleep 1
 

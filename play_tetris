@@ -1,2 +1,2 @@
-./tetris_beep &
+./tetris.beep &
 tint -l 1

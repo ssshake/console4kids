@@ -1,0 +1,88 @@
+#!/bin/bash
+#
+# Piano is an easy to understand music program
+# That directly shows it's relation to keyboard input and audio outpu
+# This offers a clear demonstration of while loops and case operations
+#	'if a key is this key, then the note is this note'
+#
+
+#ON START
+echo "
+		PIANO
+ _______________________________________  
+|  | | | |  |  | | | | | |  |  | | | |  | 
+|  | | | |  |  | | | | | |  |  | | | |  | 
+|  | | | |  |  | | | | | |  |  | | | |  | 
+|  |_| |_|  |  |_| |_| |_|  |  |_| |_|  | 
+|   |   |   |   |   |   |   |   |   |   | 
+| C | D | E | F | G | A | B | C | D | E | 
+|___|___|___|___|___|___|___|___|___|___| 
+
+	   Press Keys to Play
+"
+
+while true
+do
+	read -n 1 key
+	case $key in
+
+		#Top Row		
+		1)	note=A5;;
+		2)	note=B5;;
+		3)	note=C6;;
+		4)	note=D6;;
+		5)	note=E6;;
+		6)	note=F6;;
+		7)	note=G6;;
+		8)	note=A6;;
+		9)	note=B6;;
+		0)	note=C7;;
+		-)	note=D7;;
+		=)	note=E7;;
+
+		#Middle Top Row
+		q)	note=C4;;
+		w)	note=D4;;
+		e)	note=E4;;
+		r)	note=F4;;
+		t)	note=G4;;
+		y)	note=A4;;
+		u)	note=B4;;
+		i)	note=C5;;
+		o)	note=D5;;
+		p)	note=E5;;
+		"[")	note=F5;;
+		"]")	note=G5;;
+
+		#Middle Bottom Row
+		a)	note=F2;;
+		s)	note=G2;;
+		d)	note=A2;;
+		f)	note=B2;;
+		g)	note=C3;;
+		h)	note=D3;;
+		j)	note=E3;;
+		k)	note=F3;;
+		l)	note=G3;;
+		";")	note=A3;;
+		"'")	note=B3;;
+
+		#Bottom Row
+		z)	note=C1;;
+		x)	note=D1;;
+		c)	note=E1;;
+		v)	note=F1;;
+		b)	note=G1;;
+		n)	note=A1;;
+		m)	note=B1;;
+		",")	note=C2;;
+		".")	note=D2;;
+		"/")	note=E2;;
+		
+		*)
+			note=C3;
+	esac
+
+	echo "	NOTE:" $note
+	play -qn synth 2 pluck $note &>/dev/null&
+done

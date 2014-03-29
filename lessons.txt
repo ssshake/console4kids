@@ -1,0 +1,31 @@
+FILES TYPES
+
+.txt -- Text File
+.img -- ASCII Image File
+.beep -- Sound File
+.xls -- spreadsheet (not meant for consolse view)
+
+Files that are white are not executable (runnable)
+Files that are green ARE executable (runnable) They are programs
+
+Programs can be run by putting a dot '.' and a slash '/' infront of them.
+
+Example:
+
+	./runprogram
+
+
+BASIC COMMANDS
+
+These are the fundamental commands to navigate and operate this package.
+
+ls	-- Use ls to LIST files in the current directory. 
+	-- You can even list only certain files. ls *.beep
+
+cat FILENAME	--Use cat to look at the contents of files
+		--cat mario.beep
+
+./view_image FILENAME.img 	--use this to display ASCII art on screen
+
+./play_note C3			--use this to play a single note through speakers
+
