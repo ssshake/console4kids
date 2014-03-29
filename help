@@ -1,0 +1,96 @@
+#!/bin/bash
+voice(){
+        echo -e "\n"$1"\n"
+        echo $1|festival --tts&> /dev/null
+}
+
+voice "Hello I'm here to help. What is your name?"
+
+echo -n "My name is "
+read name
+
+while true
+do
+
+voice "What would you like help with $name"
+
+echo -e "
+8bit_calc.xls
+animate-image
+computer-speak
+notes
+piano
+playnote
+playtetris
+runprogram
+starwars
+starwars_telnet
+talk-to-computer
+view-image
+goodbye
+"
+
+echo -n "I want help with "
+read response
+
+voice "You said "$response
+
+case $response in 
+	"8bit_calc.xls")
+		voice "This is a binary to ascii calculator for excel"
+	;; 
+	"animate-image"	)
+		voice "Animate image will draw a .img file on the screen"
+		voice "Type in: ./animate-image and the name of the file"
+	;;
+	"computer-speak"	)
+		voice "You can have a conversation with your computer"
+		voice "You can change the file to make it ask your own questions"
+	;;
+	"notes"	)
+		voice "This will play a song"
+	;;
+	"piano"	)
+		voice "This is a piano that you can play yourself"
+		voice "You press keys on your keyboard and you will hear music notes play through your speakers"
+		voice "See if you can play a song. Just say goodbye and then type ./piano"
+	;;
+	"playnote"	)
+		voice "This will let you play one note at a time"
+		voice "Type in: ./playnote and a note you want to play like C3"
+	;;
+	"playtetris"	)
+		voice "This is a game you can play"
+	;;
+	"runprogram"	)
+		voice "This will run the main program. You should try it out."
+	;;
+	"starwars"	)
+		voice "Star wars image and music"
+	;;
+	"starwars_telnet"	)
+		voice "This will play the star wars movie as text"
+	;;
+	"talk-to-computer"	)
+		voice "This is the conversation found in the main program"
+	;;
+	"view-image"	)
+		voice "You can look at .img I M G files by typing: ./view-image filename"
+	;;
+
+        "goodbye")
+		echo "Good Bye $name"
+                echo "Good Bye $name"|festival --tts &> /dev/null&
+                exit ;;
+
+        $'\e')
+                echo "Good Bye"|festival --tts &> /dev/null&
+                exit ;;
+	*)
+		voice "I'm sorry. I didn't understand"
+	;;
+
+esac
+
+
+done
