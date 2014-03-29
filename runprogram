@@ -5,19 +5,19 @@
 #else
 	clear;
 
-	./talk_2_computer $1 2> /dev/null
+	./talk-to-computer $1 2> /dev/null
 
-	./view_image mario4.img
+	./view-image mario4.img
 
 	sleep 2
 
 	./mario.beep
 
-	./view_image star_wars.img
+	./view-image starwars.img
 
 	sleep 2
 
-	./star_wars.beep
+	./starwars.beep
 
 	sleep 1
 
@@ -26,7 +26,7 @@
 
 	sleep 2
 
-	./play_tetris
+	./playtetris
 
 	sleep 2
 

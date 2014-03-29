@@ -1,0 +1,18 @@
+voice(){
+	echo $1"?"
+	echo $1|festival --tts&> /dev/null
+	read answer
+	echo $2"."
+	echo $answer " .. " $2| festival --tts&> /dev/null
+}
+
+
+##BELOW HERE, you can type in questions and responses for the computer to ask you
+
+#cmd  #question		#response
+voice "Whats your name" "Nice to meet you"
+voice "How old are you" "Wow that's old"
+voice "What did you do today" "Thats a lot of stuff... let me see if I got that right"
+
+
+
