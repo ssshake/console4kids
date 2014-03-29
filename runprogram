@@ -24,6 +24,9 @@
 	echo "I think you should try this game. It's call Tetris."
 	echo "I think you should try this game. It's call Tetris."| festival --tts &> /dev/null
 
+	echo "Press J or L to move left and right. Press K to rotate the blocks"
+	echo "Press J or L to move left and right. Press K to rotate the blocks"| festival --tts &> /dev/null
+
 	sleep 2
 
 	./playtetris
