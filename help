@@ -12,7 +12,7 @@ read name
 while true
 do
 
-voice "What would you like help with $name"
+voice "What would you like help with $name?"
 
 echo -e "
 8bit_calc.xls
