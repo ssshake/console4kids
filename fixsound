@@ -1,6 +1,10 @@
+#!/bin/bash
 #Run this first of sound doesnt work
 sudo modprobe pcspkr
+
 echo "(Parameter.set 'Audio_Method 'Audio_Command)
 (Parameter.set 'Audio_Command \"aplay -q -c 1 -t raw -f s16 -r \$SR \$FILE\")" > ~/.festivalrc
 
-
+echo "pcspkr will break alsa beep emulation for computers without buzzers, like some laptops
+instead you might have to remove the module, sudo modprobe -r pcspkr
+Then go into alsamixer and turn beep to 50% and M to unmute"
