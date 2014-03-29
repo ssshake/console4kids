@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Piano is an easy to understand music program
-# That directly shows it's relation to keyboard input and audio output
+# That directly shows its relation to keyboard input and audio output
 # This offers a clear demonstration of while loops and case operations
 #	'if a key is this key, then the note is this note'
 #
