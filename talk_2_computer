@@ -1,0 +1,66 @@
+#!/bin/bash
+right_age=$1
+
+echo "(Parameter.set 'Audio_Method 'Audio_Command)
+(Parameter.set 'Audio_Command \"aplay -q -c 1 -t raw -f s16 -r \$SR \$FILE\")" > ~/.festivalrc
+
+question="What is your name?"
+echo -e $question"\n"
+echo $question | festival --tts
+read name
+echo -e "\nHello" $name".\n"
+echo "Hello" $name | festival --tts
+
+question="How old are you now?"
+echo -e $question"\n"
+echo $question | festival --tts
+read age
+
+while [ $age -ne $right_age ] 
+do
+	answer="Ha ha ha. I dont think so, how old are you really?"
+	echo -e "\n"$answer"\n";
+	echo $answer| festival --tts
+	read age
+done
+
+answer="You are $age. Wow thats old."
+echo -e "\n$answer\n"
+echo "$answer"|festival --tts
+
+question="Is it your birthday?"
+echo -e "\n$question\n"
+echo $question |festival --tts
+
+read bday
+
+if [ "$bday" == "yes" ]
+then
+	answer="Happy ""$age""th Birthday $name!"
+	echo -e "\n$answer\n"
+	echo $answer| festival --tts
+else
+	answer="Too bad. That would have been fun."
+	echo -e "\n$answer"
+	echo $answer| festival --tts
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

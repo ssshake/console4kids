@@ -1,0 +1,34 @@
+#if [ -z $1 ]
+#then
+#	echo "You need to tell me your age"
+#	echo "Usage: ./runprogram _AGE_";
+#else
+	clear;
+
+	./talk_2_computer $1 2> /dev/null
+
+	./view_image mario4.img
+
+	sleep 2
+
+	./mario_beep
+
+	./view_image star_wars.img
+
+	sleep 2
+
+	./star_wars_beep
+
+	sleep 1
+
+	echo "I think you should try this game. It's call Tetris."
+	echo "I think you should try this game. It's call Tetris."| festival --tts &> /dev/null
+
+	sleep 2
+
+	./play_tetris
+
+	sleep 2
+
+	echo "Goodbye"| festival --tts &> /dev/null
+#fi

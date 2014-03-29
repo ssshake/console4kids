@@ -1,0 +1,4 @@
+ls -1 -R $1|while read line; 
+do 
+	./files_to_notes "$line";
+done

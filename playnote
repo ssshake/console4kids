@@ -1,0 +1,3 @@
+echo $1;
+play -qn synth 2 pluck $1 &>/dev/null& 
+

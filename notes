@@ -1,0 +1,11 @@
+note=(
+F G E D C D A B
+C C C D E B C
+)
+for i in ${note[@]};
+do
+	echo $i;
+	play -qn synth 2 pluck $i &>/dev/null& 
+	sleep .25;
+done
+

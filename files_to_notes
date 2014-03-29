@@ -1,0 +1,32 @@
+speed=.3
+foo=`md5sum $1|cut -d' ' -f 1`
+echo "MD5SUM: " $foo
+for (( i=0; i<${#foo}; i++ )); do
+	case ${foo:$i:1} in
+		0)
+			n=C4;;
+		1)
+			n=D4;;
+		2)
+			n=E4;;
+		3)
+			n=F4;;
+		4)
+			n=G4;;
+		5)
+			n=A4;;
+		6)
+			n=B4;;
+		7)
+			n=C5;;
+		8)
+			n=D5;;
+		9)
+			n=G3;;
+		*)
+			n=`echo ${foo:$i:1}|tr '[:lower:]' '[:upper:]'`3;
+	esac
+	echo ${foo:$i:1}":"$n
+	play -qn synth 2 pluck $n &>/dev/null&
+	sleep $speed
+done

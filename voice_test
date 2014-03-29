@@ -1,0 +1,11 @@
+voice(){
+	echo $1"?"
+	echo $1|festival --tts
+	read answer
+	echo $2"."
+	echo $2| festival --tts
+}
+
+voice "Whats your name" "Nice to meet you"
+voice "How old are you" "Wow that's old"
+voice "What did you do today" "Thats a lot of stuff... let me see if I got that right"
