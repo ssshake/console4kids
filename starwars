@@ -1,0 +1,2 @@
+./view-image starwars.img
+./starwars.beep &> /dev/null

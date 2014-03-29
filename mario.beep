@@ -6,7 +6,6 @@
  
 # Codigo adaptado para sh por eniodefarias (http://aoredordoburacotudoebeira.wordpress.com/)
 # http://www.youtube.com/watch?v=lpk5U70MQBg
-sudo modprobe pcspkr 
  
  
 beep --verbose -f 480 -l 200 
