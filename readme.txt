@@ -24,6 +24,6 @@ star_wars			Plays star wars song in beep
 talk_2_computer			“AI” TTS and text input conversation with computer
 tetris_beep			Plays tetris song in beep
 voice_test			TTS/Text Input sample
-
+piano				A basic piano and easy to read program
 
 
