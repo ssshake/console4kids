@@ -1,0 +1,8 @@
+./song.beep &>/dev/null &
+ls -1 *.img|while read line;
+do
+	./animate-image $line
+	sleep 1
+done
+pkill -9 beep
+beep -f 1174.7 -l 122 -d 0
