@@ -13,17 +13,18 @@ or
 USAGE
 
 files_to_notes			./files_to_notes FILENAME		Converts MD5 of file to notes
-files_to_notes_recurse	
 install-dependancies		
-mario_beep			Mario 3 theme song using beep
-mario_test			Mario 1 theme song using sox, without proper delay
+
+runprogram			Runs main program
+talk-to-compute			“AI” TTS and text input conversation with computer
+computer-speak			Simple program to have a Q&A over TTS with Computer
+
 notes				Sample using sox
 playnote			./playnote C3				Plays a single note
-runprogram			Runs main program
-star_wars			Plays star wars song in beep
-talk_2_computer			“AI” TTS and text input conversation with computer
-tetris_beep			Plays tetris song in beep
-voice_test			TTS/Text Input sample
 piano				A basic piano and easy to read program
 
+starwars.beep			Plays star wars song in beep
+mario.beep			Mario 3 theme song using beep
+tetris.beep			Plays tetris song in beep
 
+starwars_telnet			Watch the entire Star Wars movie in ASCII over telnet
