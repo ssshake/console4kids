@@ -1,2 +1,5 @@
 ./tetris.beep &
 tint -l 1
+pkill -9 beep
+beep -f 1174.7 -l 122 -d 0
+
