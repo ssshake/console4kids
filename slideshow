@@ -1,3 +1,4 @@
+echo "Welcome to the slideshow.. Here are some pictures and music. that you can add to yourself"|festival --tts &>/dev/null &
 ./song.beep &>/dev/null &
 ls -1 *.img|while read line;
 do
