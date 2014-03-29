@@ -78,7 +78,13 @@ do
 		",")	note=C2;;
 		".")	note=D2;;
 		"/")	note=E2;;
-		
+	
+		#OTHER
+	
+		$'\e') 
+			echo "Good Bye"|festival --tts &> /dev/null&
+			exit ;;	
+	
 		*)
 			note=C3;
 	esac
