@@ -8,12 +8,12 @@ sudo apt-get install sox festival beep tint
 
 or
 
-./install-dependancies
+./install-dependencies
 
 USAGE
 
 files_to_notes			./files_to_notes FILENAME		Converts MD5 of file to notes
-install-dependancies		
+install-dependencies		
 
 runprogram			Runs main program
 talk-to-compute			“AI” TTS and text input conversation with computer
